@@ -1,0 +1,130 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+<div class="site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
+
+    {{#if @custom.show_publication_cover}}
+        {{#if @site.cover_image}}
+            {{!-- This is a responsive image, it loads different sizes depending on device
+            https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
+            <img class="site-header-cover"
+                srcset="{{img_url @site.cover_image size="s"}} 300w,
+                        {{img_url @site.cover_image size="m"}} 600w,
+                        {{img_url @site.cover_image size="l"}} 1000w,
+                        {{img_url @site.cover_image size="xl"}} 2000w"
+                sizes="100vw"
+                src="{{img_url @site.cover_image size="xl"}}"
+                alt="{{@site.title}}"
+            />
+        {{/if}}
+    {{/if}}
+
+    {{#match @custom.header_style "!=" "Hidden"}}
+        <div class="site-header-inner inner">
+            {{#unless @custom.show_logo_in_navigation}}
+                {{#if @site.logo}}
+                    <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+                {{else}}
+                    <h1 class="site-title">{{@site.title}}</h1>
+                {{/if}}
+            {{/unless}}
+            {{#if @site.description}}
+                <p class="site-description">{{@site.description}}</p>
+                <div class="myBTNdiv" style="padding-top: 60px;">
+                    <a href="https://www.eventbrite.com/e/greenville-ghost-tours-downtown-paranormal-walking-tour-tickets-412480178317" class="myButton" rel="sponsored">BUY GREENVILLE GHOST TOUR TICKETS</a>
+                </div>
+            {{/if}}
+        </div>
+    {{/match}}
+
+</div>
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+<article class="article article-home post no-image">
+    <header class="article-header gh-canvas">
+        <h1 class="article-title">About</h1>
+    </header>
+    <section class="gh-content gh-canvas">
+        <p>Greenville Ghost Tours is founded by certified paranormal investigator and researcher Gabe Mathews, founder of Truth Searchers: Paranormal Investigators. Gabe has been fascinated with all things paranormal his entire life. </p><p>Gabe considers himself a paranormal educator. Greenville Ghost Tours welcomes believers and skeptics alike. Gabe believes that the only thing separating a skeptic from a believer is evidence.</p><p>Greenville Ghost Tours LLC is a licensed tour business recognized by the City of Greenville and looks to be a staple in the community for years to come.</p>
+    </section>
+</article>
+
+<article class="article article-home post no-image">
+    <header class="article-header gh-canvas">
+        <h1 class="article-title">FAQ</h1>
+    </header>
+    <section class="gh-content gh-canvas">
+        <p><strong>Where do I buy tickets? V</strong></p>
+        <p>Click the big green button.
+            <div class="myBTNdiv">
+                <a href="https://www.eventbrite.com/e/greenville-ghost-tours-downtown-paranormal-walking-tour-tickets-412480178317" class="myButton" rel="sponsored">BUY GREENVILLE GHOST TOUR TICKETS</a>
+            </div>
+        </p>
+        
+        <p><strong>How long does the tour last? V</strong></p>
+        <p class="faq">The Greenville Ghost Tour lasts approximately 90 minutes. </p>
+        
+        <p><strong>How far do you walk? V</strong></p>
+        <p class="faq"> The downtown walking tour is just a shade over 2 miles, so bring your walking shoes!</p>
+        
+        <p><strong>When are the tours V</strong></p> 
+        <p class="faq"> Please check our <a href="https://www.eventbrite.com/e/greenville-ghost-tours-downtown-paranormal-walking-tour-tickets-412480178317">ticket page</a> for up to date tour schedule. </p>
+        
+        <p><strong>Where does the tour start? V</strong></p> 
+        <p class="faq"> The tour starts on the West End at the <a href="https://goo.gl/maps/aMGpPeRsgXGVxcS37">Rose Crystal Tower</a> in Pedrick's Garden at Falls Park. The Rose Crystal Tower is located behind Vellow Fellow, Mellow Mushroom, Smoke On the Water, Eggs Up Grill, and the Warehouse Theater.</p>
+        
+        <p><strong>Where does the tour end? V</strong></p>
+        </p> <p class="faq"> In front of the Westin Poinsett Hotel.</p>
+        
+        <p><strong>I went on a ghost tour before and it was super boring!! They kept talking about the architecture and what year buildings were built. Is this that type of tour V</strong></p>
+        <p class="faq"> NO! This is a ghost tour, not a history tour. This tour strives to be entertaining and educate on the paranormal. The tour is guided by a certified paranormal investigator.</p>
+        
+        <p><strong>Will we see a ghost on this tour? V</strong></p>
+        <p class="faq"> Greenville Ghost Tours cannot guarantee that you will see a ghost. Actually seeing a full bodied apparition is incredibly rare. Many guests on the tour have been able to pick up anomalies such as orbs, EVPs, and EMF readings.</p>
+        
+        <p><strong>I had something paranormal happen to me that I would like to have investigated V</strong></p>
+        <p class="faq"> The Greenville Ghost Tours is ran by Gabe Mathews, founder and certified paranormal investigator. Please contact him or check out Truth Searchers: Paranormal Investigators website <a href="http://www.paranormaltspi.com">paranormaltspi.com</a>.</p>
+        
+        <p><strong>I run a business or know a building downtown Greenville, SC that had some paranormal activity that you should include on your tour V</strong> </p> 
+        <p class="faq"> Please <a href="https://www.greenvilleghosttours.com/contact/">contact</a> us, we would love to be able to tell your story on the tour.</p>
+        
+        <p><strong>Will we be able to use paranormal equipment on the tour? V</strong> </p>
+        <p class="faq"> Yes! Greenville Ghost Tours has EMF meters for tour guests who want one. You can also use your phone to try to capture orb photos, or other anomalies. Time permitting, other paranormal equipment may be demonstrated during the tour.</p>
+        
+        <p><strong>Do you offer private tours V</strong></p>
+        <p class="faq"> Yes, please <a href="https://www.greenvilleghosttours.com/contact/">contact</a> Greenville Ghost Tours for a quote and more information.</p>
+        
+        <p><strong>Do you offer a haunted bar crawl?  V</strong></p>
+        <p class="faq">Greenville Ghost Tours plans to offer a haunted bar crawl in the near future, until then, it is offered as a private tour. Please <a href="https://www.greenvilleghosttours.com/contact/">contact</a> for details.</p>
+        
+        <p><strong>Are the tours kid friendly? V</strong></p>
+        <p class="faq">The stories on the tour talk about death, dying, and some dark history of Greenville. I guess I'd consider it a tame PG-13 rating. If the kid can handle stories about decapitations and prostitutes, then bring them along!</p>
+        
+        <p><strong>Where should I park? V</strong></p>
+        <p class="faq">The County Square Lot (301 University Ridge) offers free parking and is very close to the tour starting point. Otherwise, the downtown parking decks are a good option. View the <a href="https://grvlsc.maps.arcgis.com/apps/instant/media/index.html?appid=4efb28ee23dc449bb33fe5948be05c13">Downtown Greenville Interactive Parking Map</a> for more parking info.</p>
+        
+        <p><strong>I have encountered an evil entity on your tour and this dark passenger has attached to me and was brought back to my home. V</strong></p>
+        <p class="faq">Please contact Gabe at <a href="http://www.paranormaltspi.com">paranormaltspi.com</a> for advice. Until then, try smudging with a palo santo stick, inside then outside the house, then sprinkle blessed salt around and inside the home, inside first.</p>
+        
+        <p><strong>Do you allow dogs on the tour? V</strong></p>
+        <p class="faq">Service dogs are definitely allowed. Smaller or well behaved dogs can also come on the tour. I like dogs, but not everyone does and I want to respect guests comfort. That being said, I have a small dog I sometimes bring on the tour. Dogs can be more susceptible to sensing paranormal entities. If your dog detects an entity and is too disruptive, we may have to perform a ritual cleansing and you may have to exit the tour early. </p>
+        
+        <p><strong>Are there bathroom breaks? V</strong></p>
+        <p class="faq"> Yes, there will be a couple of opportunities to use the restroom.</p>
+        
+        <p><strong>What is your rain policy? V</strong></p>
+        <p class="faq">If it's a steady rain or thunderstorm, I'll cancel the tour and refund tickets. For intermittent drizzle, game on! Please dress appropriately and bring an umbrella if necessary.</p>
+        
+        <p><strong>What is Greenville Ghost Tour's refund policy? V</strong></p>
+        <p class="faq">No refunds on missed tours. Once tickets are purchased, your space is being guaranteed for the tour. You are responsible to show up at the right location, on time.</p>
+        
+        <p><strong>Do you plan to offer tours all year round? V</strong></p>
+        <p class="faq"> Greenville Ghost Tours hopes to offer tours all year round. Please check our <a href="https://www.eventbrite.com/e/greenville-ghost-tours-downtown-paranormal-walking-tour-tickets-412480178317">ticket page</a> for upcoming tours.</p>
+        
+        <p><strong>My question isn't answered here! V</strong></p>
+        <p class="faq"> Please <a href="https://www.greenvilleghosttours.com/contact/">contact us</a></p>
+    </section>
+</article>
+</main>
