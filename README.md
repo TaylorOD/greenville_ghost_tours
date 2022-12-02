@@ -29,7 +29,6 @@ One neat trick is that you can also create custom one-off templates by adding th
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
 - `author-ali.hbs` - Custom template for `/author/ali/` archive
 
-
 # Development
 
 Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
@@ -56,14 +55,32 @@ yarn zip
 - Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
 - [Color Mod](https://github.com/jonathantneal/postcss-color-mod-function)
 
-
 # SVG Icons
 
 Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
 
 You can add your own SVG icons in the same manner.
 
-
 # Copyright & License
 
 Copyright (c) 2013-2022 Ghost Foundation - Released under the [MIT license](LICENSE).
+
+# Download/Update Instructions
+
+1. Sign in at ghost.org
+2. Navigate to settings (cog wheel on bottom left corner)
+3. Click `Design`
+4. Click `Change theme` (in bottom left corner)
+5. Click `Advanced` drop down (in top right corner)
+6. Locate the theme that says `ACTIVE` and download it (three dots on the side)
+7. Open the zip file in a code editor and make the changes you need to make
+
+# Upload/Update Instructions
+
+1. Run `yarn zip`
+2. Sign in at ghost.org
+3. Navigate to settings (cog wheel on bottom left corner)
+4. Click `Design`
+5. Click `Change theme` (in bottom left corner)
+6. Click `Upload theme` button (in top right corner)
+7. Select the zip file with your updated code/zip file
