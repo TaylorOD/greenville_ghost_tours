@@ -84,3 +84,4 @@ Copyright (c) 2013-2022 Ghost Foundation - Released under the [MIT license](LICE
 5. Click `Change theme` (in bottom left corner)
 6. Click `Upload theme` button (in top right corner)
 7. Select the zip file with your updated code/zip file
+8. Navigate to `Site design -> Site-wide -> Color scheme` and set it to dark
